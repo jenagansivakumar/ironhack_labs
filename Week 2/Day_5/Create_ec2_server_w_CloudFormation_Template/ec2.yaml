@@ -1,0 +1,13 @@
+Resources:
+  EC2Server:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-03216a20ecc5d72ee
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - sg-098fe5bc3127a3eaf 
+      KeyName: jena-cloud-formation-key-pair
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs:
+            VolumeSize: 25

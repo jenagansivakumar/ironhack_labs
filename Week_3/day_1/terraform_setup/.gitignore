@@ -3,3 +3,4 @@
 *.tfstate.*
 *.log
 *.lock.hcl
+.terraform/

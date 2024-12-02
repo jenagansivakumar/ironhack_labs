@@ -1,6 +1,6 @@
 resource "aws_internet_gateway" "gw" {
-  vpc_id = aws_vpc.jena_vpc.id
+  vpc_id = aws_vpc.myVpc.id
   tags = {
-    Name="jena_gw"
+    Name = "gw"
   }
 }

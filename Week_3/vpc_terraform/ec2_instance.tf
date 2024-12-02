@@ -1,7 +1,6 @@
 resource "aws_instance" "public_ec2" {
   ami                         = var.ami_image
   instance_type               = var.instance_type
-  key_name                    = "myKey"
   availability_zone           = "us-east-1a"
   vpc_security_group_ids      = [aws_security_group.public_security_group.id]
   subnet_id                   = aws_subnet.public_subnet.id
@@ -17,7 +16,7 @@ resource "aws_instance" "public_ec2" {
 
 
   tags = {
-    Name = "web1_instance"
+    Name = "jena_web1_instance"
   }
 }
 
@@ -40,10 +39,6 @@ resource "aws_instance" "private_ec2" {
 
 
   tags = {
-    Name = "web2_instance"
+    Name = "jena_web2_instance"
   }
-}
-
-output "public_ip_address" {
-  value = aws_instance.private_ec2.public_ip
 }

@@ -1,0 +1,12 @@
+# Terraform Plan
+terraform.tfplan
+
+# Terraform State
+terraform.tfstate
+terraform.tfstate.*
+
+# Terraform Cache Directory
+.terraform
+
+# Console History
+console-history

@@ -15,5 +15,15 @@ variable "subnets" {
 }
 
 variable "vpc_cidr_block" {
-  type = string
+  default = "10.0.0.0/16"
+  type    = string
+}
+
+variable "inbound_rules" {
+  type = map(object({
+    from_port   = number
+    to_port     = number
+    protocol    = string
+    cidr_blocks = list(string)
+  }))
 }

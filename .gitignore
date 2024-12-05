@@ -1,6 +1,15 @@
+*.vault
+*.log
+.ssh/
+venv/
+inventory/
+ansible.cfg
+.fact_cache/
+.ansible/
+*~
+.DS_Store
 *.tfstate
 *.tfstate.backup
 .terraform/
 .terraform.lock.hcl
-.DS_Store
-node_modules
+node_modules/

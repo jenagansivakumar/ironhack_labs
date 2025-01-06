@@ -1,0 +1,23 @@
+# Use the .NET 7.0 SDK for building the application
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+
+WORKDIR /app
+
+# Copy the API project file
+COPY Basic3TierAPI/Basic3TierAPI.csproj ./Basic3TierAPI/
+
+# Restore dependencies for the API project only
+RUN dotnet restore ./Basic3TierAPI/Basic3TierAPI.csproj
+
+# Copy the entire API project
+COPY Basic3TierAPI/ ./Basic3TierAPI/
+
+# Build the API project
+RUN dotnet build ./Basic3TierAPI/Basic3TierAPI.csproj -c Release -o /out
+
+# Use the .NET 7.0 runtime for deployment
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
+WORKDIR /app
+COPY --from=build /out .
+EXPOSE 80
+ENTRYPOINT ["dotnet", "Basic3TierAPI.dll"]

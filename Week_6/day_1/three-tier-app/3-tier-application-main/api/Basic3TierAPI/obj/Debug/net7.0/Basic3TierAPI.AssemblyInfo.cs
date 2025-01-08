@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Basic3TierAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e001d2f6d7f67a75e42f11164a6b2acf813ec34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57a47a359afe2493e96de3d2efe7714d63066966")]
 [assembly: System.Reflection.AssemblyProductAttribute("Basic3TierAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Basic3TierAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
